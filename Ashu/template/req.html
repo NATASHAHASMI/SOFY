@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✘ 𝐚 𝐲 𝐨 𝐧 𝐚 𝐫 𝐚.</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://biisal.github.io/Resources/StreamCSS.css">
+    <link rel="stylesheet" href="https://biisal.github.io/Resources/playerCss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Marquee Animation */
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .marquee span {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(100%, 0);
+            }
+
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+
+        /* Loading Screen Styles */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-size: 24px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        #loading.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Checkmark Animation Styles */
+        .checkmark {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            margin: 10% auto;
+            box-shadow: inset 0px 0px 0px #fff;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #fff;
+            fill: none;
+            animation: stroke .6s cubic-bezier(.65, .05, .36, 1) forwards;
+        }
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke .3s cubic-bezier(.65, .05, .36, 1) .8s forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scale {
+            0%, 100% {
+                transform: none;
+            }
+
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px #4caf50;
+            }
+        }
+
+        /* Spinner Styles */
+        .spinner {
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid #ffffff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="spinner"></div>
+        𝑭𝒆𝒕𝒄𝒉𝒊𝒏𝒈 𝑿𝒂𝒚𝒐𝒏𝒂𝒓𝒂 𝑫𝒂𝒕𝒂..⚠️
+    </div>
+
+    <!-- Navigation Bar -->
+    <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nleft">
+            <h1 id="heading" style="z-index: 100; color: #D8BFD8; font-size: 24px;" class="magnet">
+                <a href="https://telegram.me/xayoonara" style="color: inherit; text-decoration: none;">
+                    ✘ 𝐚 𝐲 𝐨 𝐧 𝐚 𝐫 𝐚.
+                </a>
+            </h1>
+        </div>
+        <div class="nryt">
+            <a class="home-btn magnet" href="#main" onclick="toggleWidthnav(this)">HOME</a>
+            <a href="#sec1" class="about-btn magnet" onclick="toggleWidthnav(this)">ABOUT</a>
+        </div>
+    </nav>
+
+    <!-- About Navigation -->
+    <center>
+        <div class="about-nav">
+            <a href="#sec1" class="wlcm magnet" onclick="toggleWidth(this)">WELCOME</a>
+            <a href="#sec2" class="abt-chnl magnet" onclick="toggleWidth(this)">CHANNELS</a>
+            <a href="#sec4" class="magnet contact-btn" onclick="toggleWidth(this)">DISCLAIMER</a>
+        </div>
+    </center>
+
+    <!-- Main Content -->
+    <div class="outer">
+        <div class="inner">
+            <div class="main" id="main">
+                <video id="player" class="player" src="{{file_url}}" type="video/mp4" playsinline controls width="100%"></video>
+                <div class="file-name">
+                    <p id="myDiv"><marquee style="color: #E0FFFF;">{{file_name}}</marquee></p>
+                    <p id="myDiv"><marquee style="color: #E0FFFF;">{{file_size}}</marquee></p>
+                </div>
+                <div class="downloadBtn">
+                    <button class="magnet" onclick="vlc_player()"><img src="https://i.postimg.cc/15TQ4y7B/vlc.png" alt="VLC">watch in VLC PLAYER</button>
+                    <button class="magnet" onclick="mx_player()"><img src="https://i.postimg.cc/sx4Msv4T/mx.png" alt="MX">watch in MX PLAYER</button>
+                    <button class="magnet" onclick="playit_player()"><img src="https://i.postimg.cc/VNCwVGjz/IMG-20240408-140543.jpg" alt="PLAYit">watch in PLAYit PLAYER</button>
+                    <button class="magnet" onclick="km_player()"><img src="https://i.postimg.cc/wT9tFQ9Z/km.png" alt="KM">watch in KM PLAYER</button>
+                    <button class="magnet" onclick="s_player()"><img src="https://i.postimg.cc/XYJr6NGg/s.png" alt="S">watch in S PLAYER</button>
+                    <button class="magnet" onclick="hd_player()"><img src="https://i.postimg.cc/rFT43LNh/hd.png" alt="HD">watch in HD PLAYER (4K)</button>
+                    <button class="magnet" onclick="bisalDownload()"><img style="height: 35px;" src="https://i.postimg.cc/Zncc9YLq/Pngtree-download-icon-3581467.png" alt="Download">download video</button>
+                </div>
+            </div>
+
+            <!-- About Sections -->
+            <div class="abt">
+                <div class="about">
+                    <div class="about-dets">
+                        <div class="abt-sec" id="sec1" style="padding: 160px 30px;">
+                            <h1 style="text-align: center;">WELCOME TO OUR <span>STREAMING</span> PAGE</h1>
+                            <p style="text-align: center; line-height: 2; word-spacing: 2px; letter-spacing: 0.8px;">
+                                We're thrilled to have <span>you</span> here. Get ready for an amazing <span>experience</span> filled with <span>entertainment</span>, <span>fun</span>, and <span>surprises</span>. Grab your snacks, sit back, and <span>enjoy</span> the show!
+                            </p>
+                        </div>
+                        <div class="abt-sec" id="sec2">
+                            <h1>OUR ALL <span>CHANNELS</span> LIST</h1>
+                            <div class="links chnl-link">
+                                <a class="magnet" href="https://telegram.me/moviestudioabhi"><button>MOVIESTUDIOABHI</button></a>
+                            </div>
+                        </div>
+                        <div class="abt-sec" id="sec4">
+                            <p style="text-align: center;"><marquee>Tʜɪꜱ Iꜱ Oɴʟʏ Fᴏʀ Eᴅᴜᴄᴀᴛɪᴏɴᴀʟ Pᴜʀᴘᴏꜱᴇꜱ.⚠️</marquee></p>
+                            <p style="text-align: center;">ᴛʜɪꜱ ᴡᴇʙꜱɪᴛᴇ ᴅᴏᴇꜱ ɴᴏᴛ ʜᴏꜱᴛ ᴏʀ ᴘʀᴏᴠɪᴅᴇ ᴀɴʏ ᴄᴏᴘʏʀɪɢʜᴛᴇᴅ ᴄᴏɴᴛᴇɴᴛ. ᴀʟʟ ᴠɪᴅᴇᴏꜱ ᴀɴᴅ ᴍᴇᴅɪᴀ ꜱᴛʀᴇᴀᴍ & ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜɪꜱ ᴡᴇʙꜱɪᴛᴇ ᴀʀᴇ ꜰʀᴇᴇʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ ᴀɴᴅ <span>Tʜɪꜱ Iꜱ Oɴʟʏ Fᴏʀ Eᴅᴜᴄᴀᴛɪᴏɴᴀʟ Pᴜʀᴘᴏꜱᴇꜱ.</span></p>
+                            <p style="text-align: center;">Iꜰ ʏᴏᴜ ʙᴇʟɪᴇᴠᴇ ᴛʜᴀᴛ ᴀɴʏ ᴄᴏɴᴛᴇɴᴛ ᴀᴄᴄᴇꜱꜱɪʙʟᴇ ᴛʜʀᴏᴜɢʜ ᴛʜɪꜱ ᴡᴇʙꜱɪᴛᴇ Iɴꜰʀɪɴɢᴇꜱ ᴜᴘᴏɴ ʏᴏᴜʀ ᴄᴏᴘʏʀɪɢʜᴛ, <span>ᴘʟᴇᴀꜱᴇ ᴄᴏɴᴛᴀᴄᴛ</span> ᴜꜱ ᴡɪᴛʜ ᴛʜᴇ ʀᴇʟᴇᴠᴀɴᴛ ᴅᴇᴛᴀɪʟꜱ. ᴜᴘᴏɴ ʀᴇᴄᴇɪᴠɪɴɢ ᴀ ᴠᴀʟɪᴅ ʀᴇQᴜᴇꜱᴛ, ᴡᴇ ᴡɪʟʟ ᴘʀᴏᴍᴘᴛʟʏ ʀᴇᴠɪᴇᴡ ᴀɴᴅ ʀᴇᴍᴏᴠᴇ ᴛʜᴇ Iɴꜰʀɪɴɢɪɴɢ ᴄᴏɴᴛᴇɴᴛ.</p>
+                            <div class="links contact">
+                                <a href="https://t.me/xayoonara"><button>CONTACT</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <center>
+                <div class="copyright">
+                    <h5 class="text-center">Copyright © 2023 <a href="https://t.me/moviestudioabhi"><span style="font-weight: 700;">✘ 𝐚 𝐲 𝐨 𝐧 𝐚 𝐫 𝐚.</span></a>. All Rights Reserved.</h5>
+                    <div class="icons">
+                        <a href="https://t.me/moviestudioabhi"><i class="fa-brands fa-github fa-lg"></i></a>
+                        <a href="https://t.me/xayoonara"><i class="fa-brands fa-telegram fa-lg"></i></a>
+                    </div>
+                </div>
+            </center>
+        </footer>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow.js/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+    <script src="https://biisal.github.io/Resources/StreamJs.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const uncopyableElement = document.querySelector(".uncopyable");
+            if (uncopyableElement) {
+                uncopyableElement.addEventListener("selectstart", function (event) {
+                    event.preventDefault();
+                });
+            }
+
+            // Loading screen logic
+            setTimeout(() => {
+                const loadingScreen = document.getElementById("loading");
+                loadingScreen.innerHTML = `
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark__check" fill="none" d="M14 27l10 10 15-15"/>
+                    </svg>
+                    𝑫𝒂𝒕𝒂 𝑭𝒆𝒕𝒄𝒉𝒆𝒅...⚡
+                `;
+
+                setTimeout(() => {
+                    loadingScreen.classList.add("hide");
+                    document.querySelector(".outer").style.display = "block"; // Show main content
+                }, 1000); // 1 seconds delay for success message
+            }, 1000); // 2 seconds delay for initial loading
+        });
+
+        new WOW().init();
+    </script>
+    </body>    
+   
+</html>
