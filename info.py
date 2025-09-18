@@ -99,11 +99,11 @@ CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "") # Necessary If clone 
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
 # Links
-GRP_LNK = environ.get('GRP_LNK', 't.me/Movie_Series_Request_Groups')
+GRP_LNK = environ.get('GRP_LNK', 't.me/+xd1mWvXJdVBmZDY1')
 CHNL_LNK = environ.get('CHNL_LNK', 't.me/MOVIES_SERIES_JUNCTION')
-TUTORIAL = environ.get('TUTORIAL', 'https://youtube.com/shorts/CGPakWREEeQ?si=AQQdyWnbRg78NEKr')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'IndiaEarnX') # Support Chat Link Without https:// or @
-SUPPORT_URL = environ.get('SUPPORT_CHAT', 't.me/IndiaEarnX') 
+TUTORIAL = environ.get('TUTORIAL', 't.me/MOVIES_SERIES_JUNCTION')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '+xd1mWvXJdVBmZDY1') # Support Chat Link Without https:// or @
+SUPPORT_URL = environ.get('SUPPORT_CHAT', 't.me/+xd1mWvXJdVBmZDY1') 
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
@@ -188,5 +188,6 @@ LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_I
 LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
+
 
 
