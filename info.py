@@ -17,7 +17,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'NKFILTER')
 API_ID = int(environ.get('API_ID', '24690581'))
 API_HASH = environ.get('API_HASH', '9f8082811c4e168f298e4574da790383')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5845533149:AAFSXD8SFUB2jbQswTOSjXk2ac33I-5HGog")
+BOT_TOKEN = environ.get('BOT_TOKEN', "7523297105:AAGyUx7MF_QujLggJfds6Zhz3BLOBJr1fJk")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 600))
@@ -29,9 +29,9 @@ SPELL_IMG = environ.get("SPELL_IMG", "")
 
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001859057505'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5837099475').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001756564118 -1002020224599 -1001983152794 -1001638006524 -1002369988753').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002223436236'))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5837099475 1461656174').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002180935080 -1001816200024 -1001695473207 -1003048704910').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '0').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
@@ -39,7 +39,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
 REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', False)) # Set True Or False
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', True)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub)
-auth_channel = environ.get('AUTH_CHANNEL', '-1002004495740 -1002397583283 -1002468720216') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1002462544414') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1001859057505')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
@@ -47,12 +47,12 @@ support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001826838163')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '0')).split()]
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001668906358').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://xayoonara:LAST2GNj5Qn5Yoe@last.7imhd.mongodb.net/?retryWrites=true&w=majority&appName=Last")
-DATABASE_NAME = environ.get('DATABASE_NAME', "last")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'last_file')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://ewzqycwt:gE1fOk36Ii0HRe3O@cluster0.mmnfm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Tg_files')
 
 # Premium And Referal Settings
 PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', False)) # Set True Or False
@@ -90,7 +90,7 @@ PAYMENT_TEXT = """<b>- ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs -
 ‼️ ᴀғᴛᴇʀ sᴇɴᴅɪɴɢ ᴀ sᴄʀᴇᴇɴsʜᴏᴛ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴜs sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ</b>"""
 
 
-TEAM_USERNAME = environ.get('TEAM_USERNAME', 't.me/IndiaEarnX')
+TEAM_USERNAME = environ.get('TEAM_USERNAME', 't.me/Ipapkornelite')
 TEAM_NAME = environ.get('TEAM_NAME', 'ᴛᴇᴀᴍ')
 
 # Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
@@ -99,11 +99,11 @@ CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "") # Necessary If clone 
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
 # Links
-GRP_LNK = environ.get('GRP_LNK', 't.me/Movie_Series_Request_Groups')
-CHNL_LNK = environ.get('CHNL_LNK', 't.me/MOVIES_SERIES_JUNCTION')
-TUTORIAL = environ.get('TUTORIAL', 'https://youtube.com/shorts/CGPakWREEeQ?si=AQQdyWnbRg78NEKr')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'IndiaEarnX') # Support Chat Link Without https:// or @
-SUPPORT_URL = environ.get('SUPPORT_CHAT', 't.me/IndiaEarnX') 
+GRP_LNK = environ.get('GRP_LNK', 't.me/Ipapkornelite')
+CHNL_LNK = environ.get('CHNL_LNK', 't.me/PrimeEliteGroup')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/eliteverify/6')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'PrimeEliteGroup') # Support Chat Link Without https:// or @
+SUPPORT_URL = environ.get('SUPPORT_CHAT', 't.me/PrimeEliteGroup') 
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
@@ -127,12 +127,12 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # Token Verification Info :
 VERIFY = bool(environ.get('VERIFY', False))
 VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', False))
-VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'indiaearnx.com')
-VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '5a4e2c949a57132cd5ab09d7b0df4864eb165a27')
+VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'inshorturl.com')
+VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '3d3360d80cfff24abc0ece738ee696056d6dfadb')
 # if verify second shortner is True then fill below url and api
 VERIFY_SND_SHORTLINK_URL = environ.get('VERIFY_SND_SHORTLINK_URL', '')
 VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '/')
-VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://youtube.com/shorts/CGPakWREEeQ?si=AQQdyWnbRg78NEKr')
+VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/eliteverify/6')
 
 # Shortlink Info
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', False))
@@ -160,7 +160,7 @@ YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998",
 
 
 # Online Stream and Download
-STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or False
+STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or False
 
 # If Stream Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 MULTI_CLIENT = False
@@ -170,7 +170,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://reimagined-goggles-97qx7x47qgrqfpj5-8080.app.github.dev/")
+URL = environ.get("URL", "")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
@@ -188,5 +188,8 @@ LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_I
 LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
+
+
+
 
 

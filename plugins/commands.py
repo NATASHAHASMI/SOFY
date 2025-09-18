@@ -45,6 +45,7 @@ join_db = JoinReqs
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
+    await message.react(emoji="❤️")
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             # [
@@ -146,6 +147,11 @@ async def start(client, message):
                 ]
             )
         reply_markup = InlineKeyboardMarkup(buttons)
+        m = await message.reply_sticker(
+            "CAACAgIAAxkBAAEDF8NnxXy5LPCPKxvqRl6X5sJse5cMagAC9wADVp29CgtyJB1I9A0wHgQ"
+        )
+        await asyncio.sleep(1)
+        await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(
@@ -526,13 +532,13 @@ async def start(client, message):
                 filesarr.append(msg)
                 k = await client.send_message(
                     chat_id=message.from_user.id,
-                    text=f"<b>❗️ <u>ɪᴍᴘᴏʀᴛᴀɴᴛ</u> ❗️</b>\n\n<b>ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ</b> <b><u>10 ᴍɪɴᴜᴛᴇꜱ</u> </b><b>(Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Iꜱꜱᴜᴇꜱ).</b>\n\n<b><i>📌 ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴛᴏ ꜱᴀᴠᴇᴅ ᴍᴀꜱꜱᴀɢᴇ ᴀɴᴅ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ.</i></b>",
+                    text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>",
                 )
                 await asyncio.sleep(600)
                 for x in filesarr:
                     await x.delete()
                 await k.edit_text(
-                    "<b>ʏᴏᴜʀ ꜰɪʟᴇꜱ ᴀʀᴇ ᴅᴇʟᴇᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ !\nᴘʟᴇᴀꜱᴇ ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ.</b>"
+                    "<b>Your All Files/Videos is successfully deleted!!!</b>"
                 )
 
             except Exception as e:
@@ -542,12 +548,12 @@ async def start(client, message):
         await sts.delete()
         k = await client.send_message(
             chat_id=message.from_user.id,
-            text=f"<b>❗️ <u>ɪᴍᴘᴏʀᴛᴀɴᴛ</u> ❗️</b>\n\n<b>ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ</b> <b><u>10 ᴍɪɴᴜᴛᴇꜱ</u> </b><b>(Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Iꜱꜱᴜᴇꜱ).</b>\n\n<b><i>📌 ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴛᴏ ꜱᴀᴠᴇᴅ ᴍᴀꜱꜱᴀɢᴇ ᴀɴᴅ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ.</i></b>",
+            text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>",
         )
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
-        await k.edit_text("<b>ʏᴏᴜʀ ꜰɪʟᴇꜱ ᴀʀᴇ ᴅᴇʟᴇᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ !\nᴘʟᴇᴀꜱᴇ ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ.</b>")
+        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
 
         return
 
@@ -740,7 +746,7 @@ async def start(client, message):
                         ],
                     ]
                     await message.reply_text(
-                        text="ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ ᴛᴏᴅᴀʏ 😐\nᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪꜰʏ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ",
+                        text="<b>You are not verified !\nKindly verify to continue !</b>",
                         protect_content=True,
                         reply_markup=InlineKeyboardMarkup(btn),
                     )
@@ -781,12 +787,12 @@ async def start(client, message):
             filesarr.append(msg)
         k = await client.send_message(
             chat_id=message.from_user.id,
-            text=f"<b>❗️ <u>ɪᴍᴘᴏʀᴛᴀɴᴛ</u> ❗️</b>\n\n<b>ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ</b> <b><u>10 ᴍɪɴᴜᴛᴇꜱ</u> </b><b>(Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Iꜱꜱᴜᴇꜱ).</b>\n\n<b><i>📌 ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴛᴏ ꜱᴀᴠᴇᴅ ᴍᴀꜱꜱᴀɢᴇ ᴀɴᴅ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ.</i></b>",
+            text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>",
         )
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
-        await k.edit_text("<b>ʏᴏᴜʀ ꜰɪʟᴇꜱ ᴀʀᴇ ᴅᴇʟᴇᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ !\nᴘʟᴇᴀꜱᴇ ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ.</b>")
+        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return
 
     elif data.startswith("files"):
@@ -849,7 +855,7 @@ async def start(client, message):
                         ],
                     ]
                     await message.reply_text(
-                        text="ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ ᴛᴏᴅᴀʏ 😐.\nᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪꜰʏ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ",
+                        text="<b>You are not verified !\nKindly verify to continue !</b>",
                         protect_content=True,
                         reply_markup=InlineKeyboardMarkup(btn),
                     )
@@ -911,18 +917,18 @@ async def start(client, message):
             btn = [
                 [
                     InlineKeyboardButton(
-                        "🎗️ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ 🎗️", callback_data=f"delfile#{file_id}"
+                        "Get File Again", callback_data=f"delfile#{file_id}"
                     )
                 ]
             ]
             k = await msg.reply(
-                "<b>❗️ <u>ɪᴍᴘᴏʀᴛᴀɴᴛ</u> ❗️</b>\n\n<b>ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ</b> <b><u>10 ᴍɪɴᴜᴛᴇꜱ</u> </b><b>(Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Iꜱꜱᴜᴇꜱ).</b>\n\n<b><i>📌 ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴛᴏ ꜱᴀᴠᴇᴅ ᴍᴀꜱꜱᴀɢᴇ ᴀɴᴅ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ.</i></b>",
+                "<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",
                 quote=True,
             )
             await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text(
-                "<b>Yᴏᴜʀ Fɪʟᴇ Iꜱ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ Dᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ꜰɪʟᴇ.👇",
+                "<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",
                 reply_markup=InlineKeyboardMarkup(btn),
             )
             return
@@ -1011,15 +1017,15 @@ async def start(client, message):
         protect_content=True if pre == "filep" else False,
         reply_markup=InlineKeyboardMarkup(button),
     )
-    btn = [[InlineKeyboardButton("🎗️ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ 🎗️", callback_data=f"delfile#{file_id}")]]
+    btn = [[InlineKeyboardButton("Get File Again", callback_data=f"delfile#{file_id}")]]
     k = await msg.reply(
-        "<b>❗️ <u>ɪᴍᴘᴏʀᴛᴀɴᴛ</u> ❗️</b>\n\n<b>ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ</b> <b><u>10 ᴍɪɴᴜᴛᴇꜱ</u> </b><b>(Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Iꜱꜱᴜᴇꜱ).</b>\n\n<b><i>📌 ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇꜱᴇ ꜰɪʟᴇꜱ ᴛᴏ ꜱᴀᴠᴇᴅ ᴍᴀꜱꜱᴀɢᴇ ᴀɴᴅ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ.</i></b>",
+        "<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",
         quote=True,
     )
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text(
-        "<b>Yᴏᴜʀ Fɪʟᴇ Iꜱ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ Dᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ꜰɪʟᴇ.👇",
+        "<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",
         reply_markup=InlineKeyboardMarkup(btn),
     )
     return

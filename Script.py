@@ -3,7 +3,7 @@
 class script(object):
     START_TXT = """<i>ʜᴇʟʟᴏ {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a>
 
-ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴡᴏʀʟᴅ'ꜱ ᴄᴏᴏʟᴇꜱᴛ ꜱᴇᴀʀᴄʜ ᴇɴɢɪɴᴇ.😍\n\n© ᴄᴏᴘʏʀɪɢʜᴛ ʜᴏʟᴅᴇʀ'ꜱ ᴘʟᴇᴀꜱᴇ ʀᴇᴀᴅ ᴅᴍᴄᴀ.</i>"""
+ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴡᴏʀʟᴅ'ꜱ ᴄᴏᴏʟᴇꜱᴛ ꜱᴇᴀʀᴄʜ ᴇɴɢɪɴᴇ.😍</i>"""
 
     CLONE_START_TXT = """<b><blockquote>ʜᴇʟʟᴏ {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a></blockquote>
     
@@ -215,7 +215,7 @@ Nᴀᴍᴇ - {}"""
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 : <i>{}</i>"""
 
-    CAPTION = """<b>🏷 Tɪᴛʟᴇ :</b><pre><b><i>{file_name}</i></b></pre>\n\n<blockquote><b>📢 Jᴏɪɴ </b></blockquote>: <b>@MOVIES_SERIES_JUNCTION</b> ❤️‍🔥\n\n<blockquote><b><i><a href='https://t.me/+mzhkyZUCrhJhZjA1'>Mᴜꜱᴛ Jᴏɪɴ Dᴇᴀʟꜱ Cʜᴀɴɴᴇʟ.🏴‍☠️</a></i></b></blockquote>""" 
+    CAPTION = """Rᴇǫᴜᴇsᴛ Tɪᴛʟᴇ :\n<blockquote>{file_name}</blockquote>\n⚠️ {file_size}\n\n★━━━━━━━━━━━━━━━━━━━★\n\n<blockquote>📢  𝗝 𝗢 𝗜 𝗡 </blockquote>\n: @SupporGroupElite\n\n<blockquote>💀  𝗔𝗗𝗨𝗟𝗧 𝗦𝗧𝗨𝗙𝗙 🤌</blockquote>\n: @Nsfwelite\n\n<a href='https://t.me/aboutOG'>★━━━━━━━━━━━━━━━━━━━★</a>\n\nIғ Tʜɪs Fɪʟᴇ Hᴀs Aɴʏ CᴏᴘʏRɪɢʜᴛ Rᴇʟᴀᴛᴇᴅ Issᴜᴇs  OR  Sᴏᴍᴇᴛʜɪɴɢ Eʟsᴇ P‌ʟᴇᴀs‌ᴇ Cᴏɴᴛᴀᴄᴛ 𝙈𝙔 𝙈𝘼𝙎𝙏𝙀𝙍\n@OGHomeLanderr\n\n<a href='https://t.me/aboutOG'>★━━━━━━━━━━━━━━━━━━━★</a>""" 
    
     IMDB_TEMPLATE_TXT = """
 <b>Query: {qurey}

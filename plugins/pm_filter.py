@@ -2869,7 +2869,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton("ʜᴇʟᴘ", callback_data="help"),
-                    InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about"),
+                    InlineKeyboardButton("ᴀʙᴏᴜ", callback_data="about"),
                 ],
                 [
                     InlineKeyboardButton(
@@ -2895,7 +2895,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton("ᴅᴍᴄᴀ", callback_data="help"),
-                    InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about"),
+                    InlineKeyboardButton("ᴀʙᴏᴜ", callback_data="about"),
                 ],
                 [InlineKeyboardButton("ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url=CHNL_LNK)],
             ]
