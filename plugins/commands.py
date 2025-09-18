@@ -497,12 +497,7 @@ async def start(client, message):
                 else:
                     button = [
                         [
-                            InlineKeyboardButton(
-                                "Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_CHAT}"
-                            ),
-                            InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=CHNL_LNK),
-                        ],
-                        [InlineKeyboardButton(f"{TEAM_NAME}", url=TEAM_USERNAME)],
+                            InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url=CHNL_LNK)
                     ]
                 msg = await client.send_cached_media(
                     chat_id=message.from_user.id,
@@ -2134,3 +2129,4 @@ async def purge_requests(client, message):
             parse_mode=enums.ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
+
