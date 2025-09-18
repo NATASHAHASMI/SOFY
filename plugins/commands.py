@@ -498,7 +498,7 @@ async def start(client, message):
                     button = [
                         [
                             InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url=CHNL_LNK)
-                    ]
+                    ]]
                 msg = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
@@ -2129,4 +2129,5 @@ async def purge_requests(client, message):
             parse_mode=enums.ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
+
 
