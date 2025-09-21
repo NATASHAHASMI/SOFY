@@ -150,9 +150,9 @@ async def pm_text(bot, message):
         await auto_filter(bot, content, message, reply_msg, ai_search)
     else:
         await message.reply_text(
-            text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href={GRP_LNK}>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",
+            text=f"<i>ʜᴇʏ {user} 😍 ,\n\nʙᴏᴛ ɪꜱ ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ.⚠️\nᴘʟᴇᴀꜱᴇ ᴜꜱᴇ <b><a href="https://t.me/The_Movies_Provider_Bot">ᴛʜɪꜱ ʙᴏᴛ</a></b> ꜰᴏʀ ꜱᴏᴍᴇ ᴛɪᴍᴇ. ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ.👇</i>",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"{GRP_LNK}")]]
+                [[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"t.me/The_Movies_Provider_Bot")]]
             ),
         )
         await bot.send_message(
@@ -4834,3 +4834,4 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
